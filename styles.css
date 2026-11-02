@@ -464,7 +464,7 @@ h3 { font-size: 20px; line-height: 28px; }
 .form-note { font-size: 12.5px; color: var(--dk-muted); margin-top: 14px; text-align: center; }
 
 /* footer */
-.footer { background: var(--dk-subtle); color: var(--dk-muted); padding: 72px 0 32px; --sinal-dot: var(--brand-mist); }
+.footer { background: var(--dk-subtle); color: var(--dk-muted); padding: 72px 0 0; --sinal-dot: var(--brand-mist); }
 .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; }
 .footer-brand .logo { color: var(--brand-mist); margin-bottom: 16px; }
 .footer-brand p { max-width: 320px; }
@@ -473,8 +473,10 @@ h3 { font-size: 20px; line-height: 28px; }
 .footer-col a:hover { color: var(--dk-accent); }
 .footer-bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--dk-border); font-size: 13px; }
 .footer-bottom { align-items: center; }
-.credit { display: inline-flex; align-items: center; gap: 12px; font-size: 13px; color: var(--dk-muted); }
-.credit img { height: 22px; width: auto; display: block; }
+.credit-band { margin-top: 32px; border-top: 1px solid var(--dk-border); background: #0E0820; }
+.credit { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; padding-top: 22px; padding-bottom: 22px; font-size: 14px; color: var(--dk-muted); text-align: center; }
+.credit strong { color: var(--brand-mist); font-weight: 600; }
+.credit img { height: 30px; width: auto; display: block; }
 
 /* whatsapp flutuante */
 .wa-float {
@@ -532,6 +534,7 @@ h3 { font-size: 20px; line-height: 28px; }
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .manifesto { padding: 96px 0; }
   .wa-float span { display: none; }
+  .credit { padding-bottom: 88px; }
   .wa-float { width: 56px; height: 56px; padding: 0; justify-content: center; }
   .scramble { white-space: normal; }
   .hero .eyebrow { font-size: 11px; letter-spacing: .14em; }
