@@ -27,16 +27,18 @@ Depois abra http://localhost:8000.
 
 O site está na Vercel (equipe REDBOX, projeto `site-domma-tecnologia`), ligado a este repositório:
 
-- push na `main` → publica em produção em https://site-domma-tecnologia.vercel.app;
+- push na `main` → publica em produção em https://dommasistemas.com.br (também em https://site-domma-tecnologia.vercel.app);
 - push em outra branch → gera uma URL de pré-visualização (protegida por login da Vercel).
 
 Não há framework nem comando de build: a Vercel serve os arquivos como estão.
 
-## Domínio próprio
+## Domínio
 
-O link preview (WhatsApp, Instagram, LinkedIn) usa o endereço completo do site.
-Quando o domínio próprio estiver na Vercel, troque `https://site-domma-tecnologia.vercel.app`
-em `index.html` (tags `canonical`, `og:url`, `og:image` e `twitter:image`).
+`dommasistemas.com.br` aponta para a Vercel (entrada A na HostGator) e `www` redireciona para ele.
+O e-mail (`mail`, MX), o webmail, o cPanel e o FTP continuam na HostGator, cada um com entrada própria.
+
+As tags `canonical` e `og:url` usam `https://dommasistemas.com.br/`. A imagem do link preview
+(`og:image`, `twitter:image`) carrega do endereço da Vercel, que funciona mesmo durante mudanças de DNS.
 
 ## Formulário
 
