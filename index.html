@@ -77,6 +77,7 @@
     <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
     <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
   </svg>
 
@@ -91,7 +92,17 @@
       </a>
       <nav class="nav-links" id="nav-links" aria-label="Principal">
         <a href="#servicos">Serviços</a>
-        <a href="#solucoes">Soluções</a>
+        <div class="nav-drop" id="nav-drop">
+          <button type="button" class="nav-drop-btn" id="nav-drop-btn" aria-expanded="false" aria-controls="menu-solucoes">Soluções <svg class="ic" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+          <div class="nav-drop-menu" id="menu-solucoes">
+            <a href="#domma-chat"><b>WhatsApp com IA</b><span>Domma Chat</span></a>
+            <a href="#domma-crm"><b>Domma CRM</b><span>Funil de vendas sem código</span></a>
+            <a href="#jarvis-ai"><b>Jarvis AI</b><span>Assistente pessoal com IA</span><em>Acesso antecipado</em></a>
+            <a href="#ugc-creator"><b>UGC Creator</b><span>Vídeos UGC com IA</span><em>Acesso antecipado</em></a>
+            <a href="#avatar-ia"><b>AvatarIA</b><span>Gêmeo digital em vídeo</span><em>Acesso antecipado</em></a>
+            <a class="nav-drop-todos" href="#solucoes">Ver todas as soluções <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
         <a href="#agentes">Agentes de IA</a>
         <a href="#processo">Como trabalhamos</a>
         <a href="#faq">Dúvidas</a>
@@ -246,15 +257,25 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow eyebrow-inverse">Soluções Domma</p>
-          <h2 class="display">Produtos prontos para usar a partir de hoje.</h2>
-          <p class="body-lg">Além dos projetos sob medida, a Domma tem sistemas próprios, já no ar e em uso. Você contrata, configura com o nosso time e começa a usar.</p>
+          <h2 class="display">Produtos próprios, feitos com inteligência artificial.</h2>
+          <p class="body-lg">Além dos projetos sob medida, a Domma tem sistemas próprios. O Domma Chat e o Domma CRM já estão em uso. O Jarvis AI, o UGC Creator e o AvatarIA estão em acesso antecipado: fale com a gente para ser um dos primeiros a usar.</p>
+          <nav class="solucoes-atalhos" aria-label="Produtos">
+            <a href="#domma-chat">WhatsApp com IA</a>
+            <a href="#domma-crm">Domma CRM</a>
+            <a href="#jarvis-ai">Jarvis AI</a>
+            <a href="#ugc-creator">UGC Creator</a>
+            <a href="#avatar-ia">AvatarIA</a>
+          </nav>
         </div>
 
         <!-- Domma Chat -->
-        <article class="produto reveal" aria-labelledby="p-chat">
+        <article class="produto reveal" id="domma-chat" aria-labelledby="t-domma-chat">
           <div class="produto-copy">
-            <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>Chat</i></span>
-            <h3 id="p-chat">Atendimento e vendas no WhatsApp com IA.</h3>
+            <div class="produto-topo">
+              <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>Chat</i></span>
+              <span class="produto-status">Disponível</span>
+            </div>
+            <h3 id="t-domma-chat">Atendimento e vendas no WhatsApp com IA.</h3>
             <p class="produto-lead">A IA responde seus clientes 24 horas por dia, com uma escrita natural. Ela tira dúvidas com a sua base de conhecimento, envia materiais e avisa a equipe quando um lead está pronto para comprar.</p>
             <ul class="produto-lista">
               <li><svg class="ic"><use href="#i-check"/></svg><span><b>Três modos por conversa:</b> a IA responde sozinha, sugere e você aprova, ou passa para uma pessoa.</span></li>
@@ -263,7 +284,7 @@
               <li><svg class="ic"><use href="#i-check"/></svg><span><b>Painel ao vivo e relatórios:</b> conversas, retornos e vendas do dia, com exportação em PDF.</span></li>
             </ul>
             <div class="produto-acoes">
-              <a class="btn btn-primary btn-lg" href="https://wa.me/5519984607000?text=Ol%C3%A1%2C%20Domma!%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Domma%20Chat." target="_blank" rel="noopener">Ver uma demonstração <svg class="ic"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-primary btn-lg" href="https://wa.me/5519984607000?text=Ol%C3%A1%2C%20Domma%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Domma%20Chat%20%28WhatsApp%20com%20IA%29." target="_blank" rel="noopener">Ver uma demonstração <svg class="ic"><use href="#i-arrow"/></svg></a>
               <a class="btn btn-secondary-inverse btn-lg" href="https://chat.dommasistemas.com.br" target="_blank" rel="noopener">Já sou cliente</a>
             </div>
           </div>
@@ -281,10 +302,13 @@
         </article>
 
         <!-- Domma CRM -->
-        <article class="produto produto-inverso reveal" aria-labelledby="p-crm">
+        <article class="produto produto-inverso reveal" id="domma-crm" aria-labelledby="t-domma-crm">
           <div class="produto-copy">
-            <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>CRM</i></span>
-            <h3 id="p-crm">Seu processo comercial, montado pela tela.</h3>
+            <div class="produto-topo">
+              <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>CRM</i></span>
+              <span class="produto-status">Disponível</span>
+            </div>
+            <h3 id="t-domma-crm">Seu processo comercial, montado pela tela.</h3>
             <p class="produto-lead">Monte o funil do seu jeito, com fases, campos, regras e automações, sem escrever código. Cada oportunidade mostra quanto tempo está parada e quem precisa agir.</p>
             <ul class="produto-lista">
               <li><svg class="ic"><use href="#i-check"/></svg><span><b>Kanban com prazo por fase:</b> cada fase tem seu tempo, e a equipe vê na hora o que está atrasado.</span></li>
@@ -293,7 +317,7 @@
               <li><svg class="ic"><use href="#i-check"/></svg><span><b>Relatórios e API:</b> painel, importação de planilhas e dados prontos para o Power BI. Vários negócios na mesma conta, com os dados separados.</span></li>
             </ul>
             <div class="produto-acoes">
-              <a class="btn btn-primary btn-lg" href="https://wa.me/5519984607000?text=Ol%C3%A1%2C%20Domma!%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Domma%20CRM." target="_blank" rel="noopener">Ver uma demonstração <svg class="ic"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-primary btn-lg" href="https://wa.me/5519984607000?text=Ol%C3%A1%2C%20Domma%21%20Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Domma%20CRM." target="_blank" rel="noopener">Ver uma demonstração <svg class="ic"><use href="#i-arrow"/></svg></a>
               <a class="btn btn-secondary-inverse btn-lg" href="https://crm.dommasistemas.com.br" target="_blank" rel="noopener">Já sou cliente</a>
             </div>
           </div>
@@ -305,6 +329,107 @@
             <div class="galeria-thumbs" role="group" aria-label="Telas do Domma CRM">
               <button type="button" class="thumb" aria-pressed="true" data-src="assets/solucoes/crm-kanban.webp" data-src-sm="assets/solucoes/crm-kanban-800.webp" data-alt="Domma CRM: funil de venda de franquias em kanban, com fases, prazos e total em propostas"><img src="assets/solucoes/crm-kanban-800.webp" alt="" width="800" height="500" loading="lazy"><span>Funil</span></button>
               <button type="button" class="thumb" aria-pressed="false" data-src="assets/solucoes/crm-card.webp" data-src-sm="assets/solucoes/crm-card-800.webp" data-alt="Domma CRM: ficha de uma oportunidade na fase Proposta, com campos, valor da franquia e botões para mover de fase"><img src="assets/solucoes/crm-card-800.webp" alt="" width="800" height="500" loading="lazy"><span>Oportunidade</span></button>
+            </div>
+            <figcaption class="galeria-nota">Telas reais do sistema, com dados de demonstração.</figcaption>
+          </figure>
+        </article>
+
+        <!-- Jarvis AI -->
+        <article class="produto reveal" id="jarvis-ai" aria-labelledby="t-jarvis-ai">
+          <div class="produto-copy">
+            <div class="produto-topo">
+              <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>Jarvis AI</i></span>
+              <span class="produto-status produto-status-breve">Acesso antecipado</span>
+            </div>
+            <h3 id="t-jarvis-ai">Um assistente que trabalha por você no WhatsApp.</h3>
+            <p class="produto-lead">Peça por mensagem ou por áudio. O Jarvis AI resume seus e-mails, organiza a agenda, acompanha os anúncios do Google e da Meta e consulta o Domma CRM e o Domma Chat. Ele lembra do que importa e pede sua confirmação antes de qualquer ação sensível.</p>
+            <ul class="produto-lista">
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Memória que você controla:</b> veja, edite e apague o que ele sabe sobre você, a empresa e a equipe.</span></li>
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Rotinas no piloto automático:</b> resumo da manhã, alertas de anúncios e fechamento da semana direto no seu WhatsApp.</span></li>
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Confirmação com PIN:</b> pausar campanha ou mudar orçamento só com a sua aprovação. O comando /parar interrompe tudo na hora.</span></li>
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Custo por tarefa:</b> histórico de cada pedido, auditoria e limite de gasto mensal com IA.</span></li>
+            </ul>
+            <div class="produto-acoes">
+              <a class="btn btn-primary btn-lg" href="https://wa.me/5519984607000?text=Ol%C3%A1%2C%20Domma%21%20Quero%20acesso%20antecipado%20ao%20Jarvis%20AI." target="_blank" rel="noopener">Quero acesso antecipado <svg class="ic"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-secondary-inverse btn-lg" href="https://jarvis.dommasistemas.com.br" target="_blank" rel="noopener">Já sou cliente</a>
+            </div>
+          </div>
+          <figure class="produto-galeria" data-galeria>
+            <div class="janela">
+              <div class="janela-barra"><span class="dots"><i></i><i></i><i></i></span><span class="janela-url mono">jarvis.dommasistemas.com.br</span></div>
+              <img class="janela-img" src="assets/solucoes/jarvis-inicio.webp" srcset="assets/solucoes/jarvis-inicio-800.webp 800w, assets/solucoes/jarvis-inicio.webp 1600w" sizes="(max-width: 1024px) 100vw, 620px" width="1600" height="1000" alt="Jarvis AI: tela inicial com o chat, tarefas do dia, gasto com IA e uma aprovação pendente que pede PIN" loading="lazy">
+            </div>
+            <div class="galeria-thumbs" role="group" aria-label="Telas do Jarvis AI">
+              <button type="button" class="thumb" aria-pressed="true" data-src="assets/solucoes/jarvis-inicio.webp" data-src-sm="assets/solucoes/jarvis-inicio-800.webp" data-alt="Jarvis AI: tela inicial com o chat, tarefas do dia, gasto com IA e uma aprovação pendente que pede PIN"><img src="assets/solucoes/jarvis-inicio-800.webp" alt="" width="800" height="500" loading="lazy"><span>Início</span></button>
+              <button type="button" class="thumb" aria-pressed="false" data-src="assets/solucoes/jarvis-rotinas.webp" data-src-sm="assets/solucoes/jarvis-rotinas-800.webp" data-alt="Jarvis AI: rotinas automáticas como resumo da manhã, alerta de anúncios e leads parados no CRM"><img src="assets/solucoes/jarvis-rotinas-800.webp" alt="" width="800" height="500" loading="lazy"><span>Rotinas</span></button>
+              <button type="button" class="thumb" aria-pressed="false" data-src="assets/solucoes/jarvis-memoria.webp" data-src-sm="assets/solucoes/jarvis-memoria-800.webp" data-alt="Jarvis AI: memória com fatos sobre a pessoa, a empresa e a equipe, que podem ser editados ou apagados"><img src="assets/solucoes/jarvis-memoria-800.webp" alt="" width="800" height="500" loading="lazy"><span>Memória</span></button>
+            </div>
+            <figcaption class="galeria-nota">Telas reais do sistema, com dados de demonstração.</figcaption>
+          </figure>
+        </article>
+
+        <!-- UGC Creator -->
+        <article class="produto produto-inverso reveal" id="ugc-creator" aria-labelledby="t-ugc-creator">
+          <div class="produto-copy">
+            <div class="produto-topo">
+              <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>UGC Creator</i></span>
+              <span class="produto-status produto-status-breve">Acesso antecipado</span>
+            </div>
+            <h3 id="t-ugc-creator">Vídeos UGC do seu produto, sem gravar nada.</h3>
+            <p class="produto-lead">Envie a foto de uma pessoa e a foto do produto. A IA escreve os roteiros, dá voz e movimento e monta vídeos curtos em que a pessoa apresenta e demonstra o produto, no formato de Reels, TikTok e anúncios.</p>
+            <ul class="produto-lista">
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Roteiros em variações:</b> gancho, demonstração e chamada em quatro ângulos, com checagem de promessas proibidas.</span></li>
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Consentimento antes de tudo:</b> termo de uso de imagem com assinatura eletrônica. Sem termo válido, nada é produzido.</span></li>
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Revisão e entrega:</b> ajuste pedindo em português, link de aprovação para o cliente e MP4 em 9:16, 1:1 ou 16:9 com legendas.</span></li>
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Custo sob controle:</b> estimativa antes de produzir, custo por etapa e por cliente e limites de gasto.</span></li>
+            </ul>
+            <div class="produto-acoes">
+              <a class="btn btn-primary btn-lg" href="https://wa.me/5519984607000?text=Ol%C3%A1%2C%20Domma%21%20Quero%20acesso%20antecipado%20ao%20UGC%20Creator." target="_blank" rel="noopener">Quero acesso antecipado <svg class="ic"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-secondary-inverse btn-lg" href="https://ugccreator.dommasistemas.com.br" target="_blank" rel="noopener">Já sou cliente</a>
+            </div>
+          </div>
+          <figure class="produto-galeria" data-galeria>
+            <div class="janela">
+              <div class="janela-barra"><span class="dots"><i></i><i></i><i></i></span><span class="janela-url mono">ugccreator.dommasistemas.com.br</span></div>
+              <img class="janela-img" src="assets/solucoes/ugc-roteiro.webp" srcset="assets/solucoes/ugc-roteiro-800.webp 800w, assets/solucoes/ugc-roteiro.webp 1600w" sizes="(max-width: 1024px) 100vw, 620px" width="1600" height="1000" alt="UGC Creator: quatro variações de roteiro com gancho, demonstração, b-roll e chamada, voz e cenas que serão geradas" loading="lazy">
+            </div>
+            <div class="galeria-thumbs" role="group" aria-label="Telas do UGC Creator">
+              <button type="button" class="thumb" aria-pressed="true" data-src="assets/solucoes/ugc-roteiro.webp" data-src-sm="assets/solucoes/ugc-roteiro-800.webp" data-alt="UGC Creator: quatro variações de roteiro com gancho, demonstração, b-roll e chamada, voz e cenas que serão geradas"><img src="assets/solucoes/ugc-roteiro-800.webp" alt="" width="800" height="500" loading="lazy"><span>Roteiro</span></button>
+              <button type="button" class="thumb" aria-pressed="false" data-src="assets/solucoes/ugc-briefing.webp" data-src-sm="assets/solucoes/ugc-briefing-800.webp" data-alt="UGC Creator: briefing com escolha do ator, do produto, do formato do vídeo e custo estimado"><img src="assets/solucoes/ugc-briefing-800.webp" alt="" width="800" height="500" loading="lazy"><span>Briefing</span></button>
+              <button type="button" class="thumb" aria-pressed="false" data-src="assets/solucoes/ugc-atores.webp" data-src-sm="assets/solucoes/ugc-atores-800.webp" data-alt="UGC Creator: biblioteca de atores com o status do termo de consentimento de cada um"><img src="assets/solucoes/ugc-atores-800.webp" alt="" width="800" height="500" loading="lazy"><span>Atores</span></button>
+            </div>
+            <figcaption class="galeria-nota">Telas reais do sistema, com dados de demonstração.</figcaption>
+          </figure>
+        </article>
+
+        <!-- AvatarIA -->
+        <article class="produto reveal" id="avatar-ia" aria-labelledby="t-avatar-ia">
+          <div class="produto-copy">
+            <div class="produto-topo">
+              <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>AvatarIA</i></span>
+              <span class="produto-status produto-status-breve">Acesso antecipado</span>
+            </div>
+            <h3 id="t-avatar-ia">Seu gêmeo digital para propagandas e apresentações.</h3>
+            <p class="produto-lead">Grave uma vez e crie quantos vídeos quiser. O AvatarIA clona a sua voz, gera um avatar com boca e olhos sincronizados, troca o cenário e monta propagandas, depoimentos e apresentações. Você vê quanto cada vídeo custa antes de gerar.</p>
+            <ul class="produto-lista">
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Consentimento e verificação ao vivo:</b> termo LGPD e verificação pela câmera. Só a própria pessoa autoriza o seu clone.</span></li>
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Roteiro cena a cena:</b> a IA escreve uma ou três versões, com marcações de pausa, olhar e expressão.</span></li>
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Custo antes de gerar:</b> modos Econômico, Equilibrado e Premium, escolha do motor por etapa e bloqueio por orçamento.</span></li>
+              <li><svg class="ic"><use href="#i-check"/></svg><span><b>Aprovação e formatos:</b> link de aprovação com comentário no ponto exato do vídeo e exportação em 720p ou 1080p.</span></li>
+            </ul>
+            <div class="produto-acoes">
+              <a class="btn btn-primary btn-lg" href="https://wa.me/5519984607000?text=Ol%C3%A1%2C%20Domma%21%20Quero%20acesso%20antecipado%20ao%20AvatarIA." target="_blank" rel="noopener">Quero acesso antecipado <svg class="ic"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-secondary-inverse btn-lg" href="https://avataria.dommasistemas.com.br" target="_blank" rel="noopener">Já sou cliente</a>
+            </div>
+          </div>
+          <figure class="produto-galeria" data-galeria>
+            <div class="janela">
+              <div class="janela-barra"><span class="dots"><i></i><i></i><i></i></span><span class="janela-url mono">avataria.dommasistemas.com.br</span></div>
+              <img class="janela-img" src="assets/solucoes/avatar-inicio.webp" srcset="assets/solucoes/avatar-inicio-800.webp 800w, assets/solucoes/avatar-inicio.webp 1600w" sizes="(max-width: 1024px) 100vw, 620px" width="1600" height="1000" alt="AvatarIA: estúdio de gêmeos digitais com vídeos do mês, gasto, custo médio e aprovações" loading="lazy">
+            </div>
+            <div class="galeria-thumbs" role="group" aria-label="Telas do AvatarIA">
+              <button type="button" class="thumb" aria-pressed="true" data-src="assets/solucoes/avatar-inicio.webp" data-src-sm="assets/solucoes/avatar-inicio-800.webp" data-alt="AvatarIA: estúdio de gêmeos digitais com vídeos do mês, gasto, custo médio e aprovações"><img src="assets/solucoes/avatar-inicio-800.webp" alt="" width="800" height="500" loading="lazy"><span>Início</span></button>
+              <button type="button" class="thumb" aria-pressed="false" data-src="assets/solucoes/avatar-roteiro.webp" data-src-sm="assets/solucoes/avatar-roteiro-800.webp" data-alt="AvatarIA: roteiro cena a cena com marcações de expressão como animado, pausa e olhar para a câmera"><img src="assets/solucoes/avatar-roteiro-800.webp" alt="" width="800" height="500" loading="lazy"><span>Roteiro</span></button>
             </div>
             <figcaption class="galeria-nota">Telas reais do sistema, com dados de demonstração.</figcaption>
           </figure>
@@ -549,8 +674,11 @@
       </div>
       <div class="footer-col">
         <h4>Soluções</h4>
-        <a href="#solucoes">Domma Chat</a>
-        <a href="#solucoes">Domma CRM</a>
+        <a href="#domma-chat">WhatsApp com IA</a>
+        <a href="#domma-crm">Domma CRM</a>
+        <a href="#jarvis-ai">Jarvis AI</a>
+        <a href="#ugc-creator">UGC Creator</a>
+        <a href="#avatar-ia">AvatarIA</a>
       </div>
       <div class="footer-col">
         <h4>Contato</h4>

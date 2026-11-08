@@ -34,6 +34,19 @@
   $$("a", links).forEach((a) => a.addEventListener("click", () => setMenu(false)));
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
+  /* ---------- menu suspenso das soluções ---------- */
+  const drop = $("#nav-drop");
+  const dropBtn = $("#nav-drop-btn");
+  const largo = window.matchMedia("(min-width: 1081px)");
+  const setDrop = (open) => { drop.classList.toggle("open", open); dropBtn.setAttribute("aria-expanded", String(open)); };
+  dropBtn.addEventListener("click", (e) => { e.stopPropagation(); setDrop(!drop.classList.contains("open")); });
+  drop.addEventListener("mouseenter", () => { if (largo.matches) setDrop(true); });
+  drop.addEventListener("mouseleave", () => { if (largo.matches) setDrop(false); });
+  drop.addEventListener("focusout", (e) => { if (largo.matches && !drop.contains(e.relatedTarget)) setDrop(false); });
+  document.addEventListener("click", (e) => { if (!drop.contains(e.target)) setDrop(false); });
+  $$("a", drop).forEach((a) => a.addEventListener("click", () => setDrop(false)));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && drop.classList.contains("open")) { setDrop(false); dropBtn.focus(); } });
+
   /* ---------- reveal com escalonamento ---------- */
   const groups = new Map();
   $$(".reveal").forEach((el) => {
