@@ -160,6 +160,24 @@
   });
   editorIO.observe($(".editor"));
 
+  /* ---------- galeria das soluções ---------- */
+  $$("[data-galeria]").forEach((g) => {
+    const img = $(".janela-img", g);
+    const thumbs = $$(".thumb", g);
+    thumbs.forEach((t) => t.addEventListener("click", () => {
+      if (t.getAttribute("aria-pressed") === "true") return;
+      thumbs.forEach((x) => x.setAttribute("aria-pressed", String(x === t)));
+      const trocar = () => {
+        img.srcset = `${t.dataset.srcSm} 800w, ${t.dataset.src} 1600w`;
+        img.src = t.dataset.src;
+        img.alt = t.dataset.alt;
+      };
+      if (reduce) { trocar(); return; }
+      img.classList.add("trocando");
+      setTimeout(() => { trocar(); img.onload = () => img.classList.remove("trocando"); if (img.complete) img.classList.remove("trocando"); }, 200);
+    }));
+  });
+
   /* ---------- demonstração de agentes ---------- */
   const loader = `<svg class="sinal-loader" viewBox="0 0 100 64" aria-hidden="true"><circle class="sl-dot" cx="44" cy="8" r="6"/><path class="sl-wave" d="M8 44C13 28 18 20 24 20C34 20 40 56 50 56C60 56 66 20 76 20C82 20 87 28 92 44"/></svg>`;
   const scripts = {
