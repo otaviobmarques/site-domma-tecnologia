@@ -25,13 +25,18 @@ Depois abra http://localhost:8000.
 
 ## Publicar
 
-Qualquer hospedagem estática serve (Vercel, Netlify, GitHub Pages). Na Vercel, importe o repositório sem framework e sem comando de build.
+O site está na Vercel (equipe REDBOX, projeto `site-domma-tecnologia`), ligado a este repositório:
 
-## Antes de ir ao ar
+- push na `main` → publica em produção em https://site-domma-tecnologia.vercel.app;
+- push em outra branch → gera uma URL de pré-visualização (protegida por login da Vercel).
 
-O link preview (WhatsApp, Instagram, LinkedIn) precisa do endereço completo do site.
-Em `index.html`, troque `https://www.dommatecnologia.com.br` pelo domínio definitivo
-(tags `canonical`, `og:url`, `og:image` e `twitter:image`).
+Não há framework nem comando de build: a Vercel serve os arquivos como estão.
+
+## Domínio próprio
+
+O link preview (WhatsApp, Instagram, LinkedIn) usa o endereço completo do site.
+Quando o domínio próprio estiver na Vercel, troque `https://site-domma-tecnologia.vercel.app`
+em `index.html` (tags `canonical`, `og:url`, `og:image` e `twitter:image`).
 
 ## Formulário
 
