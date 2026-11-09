@@ -238,6 +238,7 @@ h3 { font-size: 20px; line-height: 28px; }
 .nav-drop-menu b { font-weight: 600; font-size: 15px; grid-column: 1; }
 .nav-drop-menu span { font-size: 13px; color: var(--ink-muted); grid-column: 1; }
 .nav-drop-menu em { grid-column: 2; grid-row: 1 / span 2; align-self: center; font-style: normal; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: var(--radius-pill); background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
+.nav-drop-menu .em-novo { background: var(--success-soft); color: var(--success); }
 .nav-drop-menu .nav-drop-todos { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; border-top: 1px solid var(--border); border-radius: 0 0 var(--radius-md) var(--radius-md); font-size: 14px; font-weight: 600; color: var(--accent); }
 .nav-drop-todos .ic { width: 16px; height: 16px; }
 .nav .nav-cta { background: var(--dk-accent); color: var(--brand-ink); }
