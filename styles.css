@@ -374,6 +374,12 @@ h3 { font-size: 20px; line-height: 28px; }
 .produto-marca { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; }
 .produto-marca img { height: 30px; width: auto; display: block; }
 .produto-marca i { font-style: normal; font-size: 12px; font-weight: 700; letter-spacing: .04em; padding: 3px 8px; border-radius: var(--radius-sm); background: var(--brand-violet); color: var(--brand-ink); }
+.bot-destaque { margin-top: 32px; border-radius: var(--radius-xl); padding: 8px 40px; border: 1px solid var(--dk-border); box-shadow: var(--shadow-lg); }
+.bot-destaque .produto { padding: 40px 0; border-top: 0; }
+.bot-logo { height: 36px; width: auto; display: block; }
+.bot-destaque .galeria-thumbs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.bot-destaque .thumb { min-width: 0; }
+.bot-destaque .thumb span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .produto-topo { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 20px; }
 .produto-topo .produto-marca { margin-bottom: 0; }
 .produto-status { font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: var(--radius-pill); border: 1px solid color-mix(in srgb, var(--dk-success) 45%, transparent); color: var(--dk-success); }
@@ -395,7 +401,7 @@ h3 { font-size: 20px; line-height: 28px; }
 .janela-url { font-size: 11.5px; color: var(--dk-muted); background: var(--dk-raised); padding: 3px 12px; border-radius: var(--radius-pill); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .janela-img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; display: block; background: var(--brand-mist); transition: opacity var(--t-med) var(--ease); }
 .janela-img.trocando { opacity: 0; }
-.galeria-thumbs { display: flex; gap: 12px; margin-top: 14px; }
+.galeria-thumbs { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
 .thumb { display: flex; align-items: center; gap: 10px; padding: 6px 14px 6px 6px; border-radius: var(--radius-md); border: 1px solid var(--dk-border); background: transparent; color: var(--dk-muted); font-weight: 600; font-size: 14px; cursor: pointer; min-height: 44px; transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease); }
 .thumb img { width: 64px; height: 40px; object-fit: cover; object-position: top left; border-radius: 6px; }
 .thumb:hover { border-color: var(--dk-border-strong); color: var(--brand-mist); }
@@ -660,6 +666,9 @@ h3 { font-size: 20px; line-height: 28px; }
   .hero { padding-top: calc(var(--nav-h) + 40px); }
   .hero-inner { padding-bottom: 64px; }
   .hero-actions .btn, .produto-acoes .btn { width: 100%; }
+  .bot-destaque { padding: 4px 20px; }
+  .bot-destaque .produto { padding: 28px 0; }
+  .bot-logo { height: 30px; }
   .produto { padding: 40px 0; }
   .thumb { flex: 1; padding-right: 10px; }
   .thumb img { width: 44px; height: 28px; }
