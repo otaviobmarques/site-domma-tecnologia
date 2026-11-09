@@ -192,7 +192,7 @@
   });
 
   /* ---------- demonstração de agentes ---------- */
-  const loader = `<svg class="sinal-loader" viewBox="0 0 100 64" aria-hidden="true"><circle class="sl-dot" cx="44" cy="8" r="6"/><path class="sl-wave" d="M8 44C13 28 18 20 24 20C34 20 40 56 50 56C60 56 66 20 76 20C82 20 87 28 92 44"/></svg>`;
+  const loader = `<svg class="sinal-loader" viewBox="158 158 604 346" aria-hidden="true"><circle class="sl-dot" cx="459.5" cy="204.5" r="43.5"/><path class="sl-wave" pathLength="100" d="M197 384C228 328 268 271 312 271C372 271 404 465 465 465C526 465 572 271 621 271C672 271 694 328 723 384"/></svg>`;
   const scripts = {
     atendimento: {
       title: "Agente de atendimento",

@@ -54,9 +54,9 @@
 <body>
   <!-- Sprite: sinal Domma + ícones (traço Lucide, 2px, pontas arredondadas) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="sinal" viewBox="0 0 100 64">
-      <circle class="sinal-dot" cx="44" cy="8" r="6"/>
-      <path class="sinal-wave" d="M8 44C13 28 18 20 24 20C34 20 40 56 50 56C60 56 66 20 76 20C82 20 87 28 92 44" fill="none" stroke-width="9" stroke-linecap="round"/>
+    <symbol id="sinal" viewBox="158 158 604 346">
+      <circle class="sinal-dot" cx="459.5" cy="204.5" r="43.5"/>
+      <path class="sinal-wave" d="M197 384C228 328 268 271 312 271C372 271 404 465 465 465C526 465 572 271 621 271C672 271 694 328 723 384" fill="none" stroke-width="73" stroke-linecap="round"/>
     </symbol>
     <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
     <symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></symbol>
@@ -87,8 +87,7 @@
   <header class="nav" id="nav">
     <div class="container nav-inner">
       <a href="#topo" class="logo" aria-label="Domma Tecnologia, voltar ao topo">
-        <svg class="logo-sinal" aria-hidden="true"><use href="#sinal"/></svg>
-        <span class="logo-text"><b>Domma</b><small>Tecnologia</small></span>
+        <img class="logo-img logo-img-escuro" src="assets/domma-logo-escuro-720.png" width="720" height="146" alt="Domma Tecnologia"><img class="logo-img logo-img-claro" src="assets/domma-logo-claro-720.png" width="720" height="146" alt="" aria-hidden="true">
       </a>
       <nav class="nav-links" id="nav-links" aria-label="Principal">
         <a href="#servicos">Serviços</a>
@@ -164,10 +163,7 @@
           </div>
           <div class="editor-status">
             <span class="status-ai" id="status-ai">
-              <svg class="sinal-loader" viewBox="0 0 100 64" aria-hidden="true">
-                <circle class="sl-dot" cx="44" cy="8" r="6"/>
-                <path class="sl-wave" d="M8 44C13 28 18 20 24 20C34 20 40 56 50 56C60 56 66 20 76 20C82 20 87 28 92 44" />
-              </svg>
+              <svg class="sinal-loader" viewBox="158 158 604 346" aria-hidden="true"><circle class="sl-dot" cx="459.5" cy="204.5" r="43.5"/><path class="sl-wave" pathLength="100" d="M197 384C228 328 268 271 312 271C372 271 404 465 465 465C526 465 572 271 621 271C672 271 694 328 723 384"/></svg>
               <span id="status-text">Domma IA escrevendo</span>
             </span>
             <span class="mono">TypeScript · UTF-8</span>
@@ -273,7 +269,7 @@
         <article class="produto reveal" id="domma-chat" aria-labelledby="t-domma-chat">
           <div class="produto-copy">
             <div class="produto-topo">
-              <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>Chat</i></span>
+              <span class="produto-marca"><img src="assets/domma-logo-escuro-720.png" width="720" height="146" alt="Domma Tecnologia" loading="lazy"><i>Chat</i></span>
               <span class="produto-status">Disponível</span>
             </div>
             <h3 id="t-domma-chat">Atendimento e vendas no WhatsApp com IA.</h3>
@@ -306,7 +302,7 @@
         <article class="produto produto-inverso reveal" id="domma-crm" aria-labelledby="t-domma-crm">
           <div class="produto-copy">
             <div class="produto-topo">
-              <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>CRM</i></span>
+              <span class="produto-marca"><img src="assets/domma-logo-escuro-720.png" width="720" height="146" alt="Domma Tecnologia" loading="lazy"><i>CRM</i></span>
               <span class="produto-status">Disponível</span>
             </div>
             <h3 id="t-domma-crm">Seu processo comercial, montado pela tela.</h3>
@@ -339,7 +335,7 @@
         <article class="produto reveal" id="jarvis-ai" aria-labelledby="t-jarvis-ai">
           <div class="produto-copy">
             <div class="produto-topo">
-              <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>Jarvis AI</i></span>
+              <span class="produto-marca"><img src="assets/domma-logo-escuro-720.png" width="720" height="146" alt="Domma Tecnologia" loading="lazy"><i>Jarvis AI</i></span>
               <span class="produto-status produto-status-breve">Acesso antecipado</span>
             </div>
             <h3 id="t-jarvis-ai">Um assistente que trabalha por você no WhatsApp.</h3>
@@ -373,7 +369,7 @@
         <article class="produto produto-inverso reveal" id="ugc-creator" aria-labelledby="t-ugc-creator">
           <div class="produto-copy">
             <div class="produto-topo">
-              <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>UGC Creator</i></span>
+              <span class="produto-marca"><img src="assets/domma-logo-escuro-720.png" width="720" height="146" alt="Domma Tecnologia" loading="lazy"><i>UGC Creator</i></span>
               <span class="produto-status produto-status-breve">Acesso antecipado</span>
             </div>
             <h3 id="t-ugc-creator">Vídeos UGC do seu produto, sem gravar nada.</h3>
@@ -407,7 +403,7 @@
         <article class="produto reveal" id="avatar-ia" aria-labelledby="t-avatar-ia">
           <div class="produto-copy">
             <div class="produto-topo">
-              <span class="produto-marca"><svg aria-hidden="true"><use href="#sinal"/></svg><b>Domma</b><i>AvatarIA</i></span>
+              <span class="produto-marca"><img src="assets/domma-logo-escuro-720.png" width="720" height="146" alt="Domma Tecnologia" loading="lazy"><i>AvatarIA</i></span>
               <span class="produto-status produto-status-breve">Acesso antecipado</span>
             </div>
             <h3 id="t-avatar-ia">Seu gêmeo digital para propagandas e apresentações.</h3>
@@ -685,8 +681,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#topo" class="logo logo-inverse" aria-label="Domma Tecnologia">
-          <svg class="logo-sinal" aria-hidden="true"><use href="#sinal"/></svg>
-          <span class="logo-text"><b>Domma</b><small>Tecnologia</small></span>
+          <img class="logo-img" src="assets/domma-logo-escuro-720.png" width="720" height="146" alt="Domma Tecnologia" loading="lazy">
         </a>
         <p>Sistemas web, apps e sites com superinteligência artificial.</p>
       </div>

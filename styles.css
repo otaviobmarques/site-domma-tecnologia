@@ -62,6 +62,8 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .nav.scrolled .logo-img-escuro, :root:not([data-theme="light"]) .nav.menu-open .logo-img-escuro { display: block; }
+  :root:not([data-theme="light"]) .nav.scrolled .logo-img-claro, :root:not([data-theme="light"]) .nav.menu-open .logo-img-claro { display: none; }
   :root:not([data-theme="light"]) {
     --surface: #1A1033;
     --surface-subtle: #140C2A;
@@ -85,6 +87,8 @@
     color-scheme: dark;
   }
 }
+:root[data-theme="dark"] .nav.scrolled .logo-img-escuro, :root[data-theme="dark"] .nav.menu-open .logo-img-escuro { display: block; }
+:root[data-theme="dark"] .nav.scrolled .logo-img-claro, :root[data-theme="dark"] .nav.menu-open .logo-img-claro { display: none; }
 :root[data-theme="dark"] {
     --surface: #1A1033;
     --surface-subtle: #140C2A;
@@ -203,10 +207,11 @@ h3 { font-size: 20px; line-height: 28px; }
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .logo { display: inline-flex; align-items: center; gap: 10px; }
-.logo-sinal { width: 46px; height: 30px; }
-.logo-text { display: flex; flex-direction: column; line-height: 1; }
-.logo-text b { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
-.logo-text small { font-size: 8.5px; letter-spacing: .42em; font-weight: 600; color: var(--brand-violet); margin-top: 4px; text-transform: uppercase; }
+.logo-img { display: block; height: 36px; width: auto; }
+.logo-img-claro { display: none; }
+.nav.scrolled .logo-img-escuro, .nav.menu-open .logo-img-escuro { display: none; }
+.nav.scrolled .logo-img-claro, .nav.menu-open .logo-img-claro { display: block; }
+.footer-brand .logo-img { height: 40px; }
 .nav-links { display: flex; align-items: center; gap: 28px; font-weight: 500; font-size: 15px; }
 .nav-links > a:not(.btn) { position: relative; opacity: .82; transition: opacity var(--t-fast) var(--ease); }
 .nav-links > a:not(.btn):hover { opacity: 1; }
@@ -307,9 +312,9 @@ h3 { font-size: 20px; line-height: 28px; }
 
 /* SinalLoader: a onda sendo desenhada, ponto pulsando */
 .sinal-loader { width: 28px; height: 18px; overflow: visible; }
-.sl-dot { fill: var(--brand-mist); animation: pulse 1.2s var(--ease) infinite; transform-origin: 44px 8px; }
-.sl-wave { fill: none; stroke: var(--brand-violet); stroke-width: 9; stroke-linecap: round; stroke-dasharray: 160; stroke-dashoffset: 160; animation: draw 1.6s var(--ease) infinite; }
-@keyframes draw { 0% { stroke-dashoffset: 160; } 55% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -160; } }
+.sl-dot { fill: var(--brand-mist); animation: pulse 1.2s var(--ease) infinite; transform-origin: 459.5px 204.5px; }
+.sl-wave { fill: none; stroke: var(--brand-violet); stroke-width: 73; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; animation: draw 1.6s var(--ease) infinite; }
+@keyframes draw { 0% { stroke-dashoffset: 100; } 55% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -100; } }
 @keyframes pulse { 0%, 100% { opacity: .35; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.1); } }
 .status-ai.done .sl-wave { animation: none; stroke-dashoffset: 0; }
 .status-ai.done .sl-dot { animation: none; opacity: 1; }
@@ -366,9 +371,8 @@ h3 { font-size: 20px; line-height: 28px; }
 .produto-inverso .produto-copy { order: 2; }
 .produto-copy { min-width: 0; }
 .produto { scroll-margin-top: 24px; }
-.produto-marca { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; }
-.produto-marca svg { width: 40px; height: 26px; }
-.produto-marca b { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.produto-marca { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.produto-marca img { height: 30px; width: auto; display: block; }
 .produto-marca i { font-style: normal; font-size: 12px; font-weight: 700; letter-spacing: .04em; padding: 3px 8px; border-radius: var(--radius-sm); background: var(--brand-violet); color: var(--brand-ink); }
 .produto-topo { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; margin-bottom: 20px; }
 .produto-topo .produto-marca { margin-bottom: 0; }
