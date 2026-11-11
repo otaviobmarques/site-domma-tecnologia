@@ -20,6 +20,12 @@
   --accent-hover: #4A2FD1;
   --on-accent: #FFFFFF;
   --accent-soft: #ECE8FF;
+  /* nicho Food (Domma Food): sempre vermelho */
+  --food: #EA1D2C;
+  --food-hover: #FF3341;
+  --food-text: #C8102E;
+  --food-soft: #FDECEE;
+  --food-dk-text: #FF6B76;
   --border: #E2DEF0;
   --border-strong: #8E86A8;
   --success: #0F7A5A;
@@ -76,6 +82,8 @@
     --accent-hover: #B3A3FF;
     --on-accent: #1A1033;
     --accent-soft: #2E2160;
+    --food-text: #FF6B76;
+    --food-soft: #3A1428;
     --border: #3A2F5E;
     --border-strong: #7D72A3;
     --success: #4FD1A5;
@@ -101,6 +109,8 @@
     --accent-hover: #B3A3FF;
     --on-accent: #1A1033;
     --accent-soft: #2E2160;
+    --food-text: #FF6B76;
+    --food-soft: #3A1428;
     --border: #3A2F5E;
     --border-strong: #7D72A3;
     --success: #4FD1A5;
@@ -407,6 +417,20 @@ h3 { font-size: 20px; line-height: 28px; }
 .thumb img { width: 64px; height: 40px; object-fit: cover; object-position: top left; border-radius: 6px; }
 .thumb:hover { border-color: var(--dk-border-strong); color: var(--brand-mist); }
 .thumb[aria-pressed="true"] { border-color: var(--dk-accent); background: var(--dk-raised); color: var(--brand-mist); }
+/* Calculadora para Delivery: destaque vermelho do nicho Food (Domma Food) */
+.produto[data-nicho="food"] { position: relative; isolation: isolate; --dk-accent: var(--food-dk-text); --dk-success: var(--food-dk-text); }
+.produto[data-nicho="food"]::before { content: ""; position: absolute; z-index: -1; inset: 20px -28px; border-radius: var(--radius-lg); background: color-mix(in srgb, var(--food) 9%, transparent); border: 1px solid color-mix(in srgb, var(--food) 40%, transparent); }
+.produto[data-nicho="food"] + .produto { border-top-color: transparent; }
+.produto[data-nicho="food"] .produto-marca img { height: 34px; }
+.produto[data-nicho="food"] .produto-marca i { background: var(--food); color: #FFFFFF; }
+.produto[data-nicho="food"] .produto-status { border-color: color-mix(in srgb, var(--food) 60%, transparent); color: var(--food-dk-text); }
+.produto[data-nicho="food"] .btn-primary { background: var(--food); color: #FFFFFF; }
+.produto[data-nicho="food"] .btn-primary:hover { background: var(--food-hover); }
+.produto[data-nicho="food"] .thumb[aria-pressed="true"] { border-color: var(--food); }
+.produto[data-nicho="food"] :focus-visible { outline-color: var(--food-dk-text); }
+.nav-drop-menu .em-food { background: var(--food-soft); color: var(--food-text); }
+@media (max-width: 1080px) { .produto[data-nicho="food"]::before { inset: 12px -16px; } }
+@media (max-width: 640px) { .produto[data-nicho="food"] { padding-left: 4px; padding-right: 4px; } .produto[data-nicho="food"]::before { inset: 10px -10px; } }
 .galeria-nota { margin-top: 10px; font-size: 12.5px; color: var(--dk-border-strong); }
 
 /* ---------- trabalhos ---------- */
